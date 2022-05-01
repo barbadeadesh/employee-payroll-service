@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Employee Payroll Form</title>
+
+
+    <style>
+        body {
+            margin: 0;
+            height: 100%;
+        }
+
+        .header {
+            background-color: white;
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border: 0px solid green;
+        }
+
+        .logo-content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            border: 0px solid green;
+            width: 80%;
+        }
+
+        .logo-content-img {
+            border: solid 0px gray;
+        }
+
+        .emp-text {
+            font: normal normal bold 20px/25px;
+            font-family: "Montserrat", sans-serif;
+            letter-spacing: 0px;
+            color: red;
+            text-transform: capitalize;
+        }
+
+        .emp-payroll {
+            color: gray;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .form-content {
+            min-height: calc(100%-80%);
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 0px solid green;
+        }
+
+        .form {
+            width: 65%;
+
+            padding: 44px 60px;
+            background: white 0px 0px no-repeat padding-box;
+            box-shadow: 0px 3px 6px grey;
+            border: 1px solid white;
+            border-radius: 8px;
+            opacity: 1;
+        }
+
+        .form-head {
+            font: normal normal bold 24px/37px Roboto;
+            letter-spacing: 0px;
+            color: gray;
+            text-transform: capitalize;
+            opacity: 1;
+            padding-bottom: 20px;
+        }
+
+        .row-content {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+            align-items: center;
+            border: 0px solid green;
+        }
+
+        .label {
+            min-width: 140px;
+        }
+
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+        .text {
+            font-size: 16px;
+            color: black;
+            opacity: 1;
+            font-family: Roboto;
+        }
+
+        .input {
+            width: 600px;
+            padding: 12px;
+            border: 1px solid lightgray;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        .profile-radio-content {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .profile-radio-content>label {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .profile {
+            width: 40px;
+            border-radius: 50px;
+            margin-left: 12px;
+        }
+
+        .buttonParant {
+            display: flex;
+            margin-bottom: 10px;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .button {
+            font-size: 20px;
+            font-family: Roboto;
+            letter-spacing: 0px;
+            color: black;
+            opacity: 1;
+            background: transparent;
+            bottom: none;
+            font-weight: 400;
+            min-width: 140px;
+            padding: 7px 7px;
+            border: 10px solid black;
+            cursor: pointer;
+        }
+
+        select {
+            padding: 12px;
+            border: 1px solid gray;
+            border-radius: 4px;
+            resize: vertical;
+            font: normal normal normal 16px Roboto;
+            letter-spacing: 0px;
+            color: black;
+            background-color: transparent;
+        }
+
+        .submitButton {
+            border: none;
+            background-color: beige;
+            margin-right: 10px;
+            align-items: flex-end;
+            margin-left: auto;
+        }
+
+        .resetButton {
+            border: none;
+            background-color: beige;
+            margin-right: 10px;
+            align-items: flex-end;
+            margin-left: auto;
+
+        }
+
+        .cancelButton {
+            border: none;
+            background-color: beige;
+            margin-right: 10px;
+            align-items: flex-end;
+            margin-right: auto;
+        }
+
+        .submit-reset {
+            display: flex;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="header-content header">
+        <div class="logo-content">
+            <img src="C:\Users\91762\OneDrive\Desktop\123\employee.jpg" width="65px" height="65px">
+            <div>
+                <span class="emp text>">EMPLOYEE</span><br>
+                <span class="emp text emp-patroll">PAYROLL</span>
+            </div>
+
+        </div>
+
+    </header>
+    <div class="form-content">
+        <form class="form" action="#" onsubmit="save(event); ">
+            <div class="form-ahed">
+                <h2><b>Employee payroll form</b></h2>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="name">
+                    <h5><b>Name</h5>
+                </label>
+                <input class="input" type="text" id="name" name="name" placeholder="Enter Your Name" required>
+
+            </div>
+
+
+            <div class="row-content">
+                <label class="label text" for="profile">
+                    <h5><b>Profile image</h5>
+                </label>
+                <div class="profile-radio-content">
+                    <label>
+                        <input type="radio" id="profile" name="profile"
+                            value="C:\Users\91762\OneDrive\Desktop\123\1.jpg required">
+                        <img class="profile" id="image" src="C:\Users\91762\OneDrive\Desktop\123\1.jpg">
+                    </label>
+                    <label>
+                        <input type="radio" id="profile" name="profile"
+                            value="C:\Users\91762\OneDrive\Desktop\123\2.jpg required">
+                        <img class="profile" id="image" src="C:\Users\91762\OneDrive\Desktop\123\2.jpg">
+                    </label>
+                    <label>
+                        <input type="radio" id="profile" name="profile"
+                            value="C:\Users\91762\OneDrive\Desktop\123\3.jpg required">
+                        <img class="profile" id="image" src="C:\Users\91762\OneDrive\Desktop\123\3.jpg">
+                    </label>
+                </div>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="gender"></h5><b>Gender</b></h5></label>
+                <div>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label class="text" for="male">
+                        <h5>Male</h5>
+                    </label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label class="text" for="female">
+                        <h5>Female</h5>
+                    </label>
+                </div>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="department">
+                    <h5><b>Department</b></h5>
+                </label>
+                <div>
+                    <input class="checkbox" type="checkbox" id="hr" name="hr" value="HR">
+                    <label class="text" for="hr">
+                        <h5>HR</h5>
+                    </label>
+                    <input class="checkbox" type="checkbox" id="Sales" name="Sales" value="Sales">
+                    <label class="text" for="sales">
+                        <h5>Sales</h5>
+                    </label>
+                    <input class="checkbox" type="checkbox" id="finance" name="finance" value="Finance">
+                    <label class="text" for="finance">
+                        <h5>Finance</h5>
+                    </label>
+                    <input class="checkbox" type="checkbox" id="engineer" name="engineer" value="Engineer">
+                    <label class="text" for="engineer">
+                        <h5>Engineer</h5>
+                    </label>
+                    <input class="checkbox" type="checkbox" id="other" name="other" value="Other">
+                    <label class="text" for="other">
+                        <h5>Other</h5>
+                    </label>
+                </div>
+
+            </div>
+            <div class="row-content">
+                <label class="label text" for="salary">
+                    <h5>Choose Your Salary</h5>
+                </label>
+                <input class="input" type="range" name="salary" id="slider" min="200000" max="400000" step="100">
+                <output id="range" class="salary-output text" for="salary"></output>
+
+
+
+
+            </div>
+            <div class="row-content">
+                <label class="label text" for="Start date"> Start Date</label>
+                <div>
+                    <select id="day" name="Day">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10" 10></option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                    <select id="month" name="Month">
+                        <option value="Jan">Jan</option>
+                        <option value="feb">feb</option>
+                        <option value="march">march</option>
+                        <option value="april">april</option>
+                        <option value="may">may</option>
+                        <option value="June">June</option>
+                        <option value="Jully">Jully</option>
+                        <option value="aug">aug</option>
+                        <option value="sept">sept</option>
+                        <option value="oct">oct</option>
+                        <option value="nov">nov</option>
+                        <option value="dec">dec</option>
+
+                    </select>
+                    <select id="year" name="Year">
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row-content">
+                <label class="label text" for="notes">Notes</label>
+                <textarea id="notes" class="input" name="Notes" placeholder="Enter your address"
+                    style="height: 100px;"></textarea>
+            </div>
+
+
+            <div class="submit-reset">
+                <button type="cancel" class="cancelButton button">Cancel</button>
+                <div>
+                    <button type="submit" class="button submitButton" id="submitButton">Submit</button>
+                    <button type="reset" class="resetButton button">Reset</button>
+                </div>
+
+
+            </div>
+
+    </div>
+
+    </div>
+
+    </form>
+    </div>
+
+</body>
+
+</html>
